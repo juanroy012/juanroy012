@@ -1,0 +1,11 @@
+html {
+    font-family: "Montserrat", serif;
+}
+
+body {
+    margin: 0 auto;
+    background-color: burlywood;
+    width: 700px;
+    height: auto;
+    text-align: auto;
+}
