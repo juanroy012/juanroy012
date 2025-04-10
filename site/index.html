@@ -26,6 +26,7 @@
                     <li><a href="glossary.html">Glossary</a></li>
                     <li><a href="survey.html">Survey</a></li>
                     <li><a href="lorem.html">Lorem</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
                 </ul>
             </nav>
         </header>
@@ -36,6 +37,7 @@
                     <img src="assets/Lab-3/Self-potrait_400.jpg" sizes="(max-width:500px) 150px, 300px" srcset="assets/Lab-3/Self-potrait_300.jpg 300w, 
                 assets/Lab-3/Self-potrait_400.jpg 400w, 
                 assets/Lab-3/Self-potrait_600.jpg 600w" alt="Self-potrait">
+                <img class="paperclip" src="assets/paperclip.png" alt="paperclip decoration">
                 </a>
                 <p>I am an international student from Indonesia, ever since I was a kid I always have a fascination in
                     computing especially
@@ -141,52 +143,75 @@
                 </div>
             </div>
             <h2>My Favourite Things</h2>
-            <h3>Games</h3>
-            <ol>
-                <li>
-                    <figure>
-                        <a target="_blank" href="https://www.dota2.com/home"><img src="assets/Lab-2/dotalogo.jpg"
-                                alt="Dota 2 Logo" width="80"></a>
-                        <figcaption>Dota 2</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <a target="_blank" href="https://en.bandainamcoent.eu/elden-ring/elden-ring"><img
-                                src="assets/Lab-2/erlogo.png" alt="Elden Ring Logo" width="80"></a>
-                        <figcaption>Elden Ring</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <a target="_blank" href="https://www.monsterhunter.com/rise/us/"><img
-                                src="assets/Lab-2/mhrlogo.jpg" alt="Monster Hunter Rise Logo" width="80"></a>
-                        <figcaption>Monster Hunter Rise</figcaption>
-                    </figure>
-                </li>
-            </ol>
-            <h3>Haiku</h3>
-            <p>
-                I want to sleep<br>
-                Swat the flies<br>
-                Softly, please.<br>
-                <cite>by <span class="author">Masaoka Shiki.</span></cite>
-            </p>
-            <h3>Public Domain Audiobook</h3>
-            <audio controls>
-                <source
-                    src="https://ia600307.us.archive.org/19/items/asongofautumn_2412.poem_librivox/songofautumn_clough_ar_64kb.mp3"
-                    type="audio/mp3">
-                <p>Use the link below if your browser doesn't support audio player</p>
-            </audio>
-            <p><a
-                    href="https://ia800307.us.archive.org/19/items/asongofautumn_2412.poem_librivox/songofautumn_clough_ar_64kb.mp3">Click
-                    here to the audio link</a></p>
-            <h3>YouTube Video</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/zgXgkpu7pkg?si=eiGMAyhQZTMLk8VU"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="favourites">
+                <input type="radio" id="tab1" name="tabs" value="game" checked>
+                <label for="tab1">
+                    <h3>Games</h3>
+                </label>
+                <div>
+                    <ol>
+                        <li>
+                            <figure>
+                                <a target="_blank" href="https://www.dota2.com/home"><img
+                                        src="assets/Lab-2/dotalogo.jpg" alt="Dota 2 Logo" width="80"></a>
+                                <figcaption>Dota 2</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <a target="_blank" href="https://en.bandainamcoent.eu/elden-ring/elden-ring"><img
+                                        src="assets/Lab-2/erlogo.png" alt="Elden Ring Logo" width="80"></a>
+                                <figcaption>Elden Ring</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <a target="_blank" href="https://www.monsterhunter.com/rise/us/"><img
+                                        src="assets/Lab-2/mhrlogo.jpg" alt="Monster Hunter Rise Logo" width="80"></a>
+                                <figcaption>Monster Hunter</figcaption>
+                            </figure>
+                        </li>
+                    </ol>
+                </div>
+                <input type="radio" id="tab2" name="tabs" value="haiku">
+                <label for="tab2">
+                    <h3>Haiku</h3>
+                </label>
+                <div>
+                    <p>
+                        I want to sleep<br>
+                        Swat the flies<br>
+                        Softly, please.<br>
+                        <cite>by <span class="author">Masaoka Shiki.</span></cite>
+                    </p>
+                </div>
+                <input type="radio" id="tab3" name="tabs" value="audio">
+                <label for="tab3">
+                    <h3>Public Domain Audiobook</h3>
+                </label>
+                <div>
+                    <audio controls>
+                        <source
+                            src="https://ia600307.us.archive.org/19/items/asongofautumn_2412.poem_librivox/songofautumn_clough_ar_64kb.mp3"
+                            type="audio/mp3">
+                        <p>Use the link below if your browser doesn't support audio player</p>
+                    </audio>
+                    <p><a
+                            href="https://ia800307.us.archive.org/19/items/asongofautumn_2412.poem_librivox/songofautumn_clough_ar_64kb.mp3">Click
+                            here to the audio link</a></p>
+                </div>
+                <input type="radio" id="tab4" name="tabs" value="video">
+                <label for="tab4">
+                    <h3>YouTube Video</h3>
+                </label>
+                <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zgXgkpu7pkg?si=eiGMAyhQZTMLk8VU"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                </div>
+            </div>
         </main>
         <footer>
             <hr>

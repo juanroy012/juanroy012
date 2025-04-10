@@ -3,11 +3,13 @@
 }
 
 .width-wrap {
+    max-width: 960px;
+    width: 100%;
     margin: 0 auto;
-    width: 960px;
+    margin: 0 auto;
     height: auto;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-left: clamp(1em, 5%, 2em);
+    padding-right: clamp(1em, 5%, 2em);
     padding-bottom: 2em;
     border: 1px solid rgb(0, 0, 0, 0.3);
     margin-bottom: 3em;
@@ -58,10 +60,10 @@ header {
 header ul {
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 
 header ul li {
-    display: inline-block;
     margin: 0 1em;
 }
 
@@ -140,19 +142,24 @@ header nav {
     letter-spacing: 4px;
 }
 
-header nav a {
-    color: #900020;
-    display: inline-block;
-    padding-top: 1em;
-    padding-bottom: 0.5em;
+
+header > nav > ul > li a:link {
+    border: none;
+    border-top: 4px solid transparent;
+    padding: 1em 0 0.5em;
+}
+
+header > nav > ul > li a:link:hover {
+    border-top-color: var(--celadon);
     text-decoration: none;
 }
 
-header nav a:hover {
-    display: inline;
-    text-decoration: none;
-    border-top: 4px solid #900020;
+header nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 1em 0 0.5em;
 }
+
 
 h1 {
     background-color: #FFFFFF;
@@ -201,11 +208,132 @@ footer {
     text-align: center;
 }
 
-#backtotop {
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+.favourites {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0em;
+    margin: 1em 0;
 }
 
+.favourites > input[type="radio"] {
+    display: none;
+}
+
+.favourites > input[type="radio"] + label {
+    order: 0;
+    cursor: pointer;
+    padding: 0em 1.5em;
+    margin: 0;
+    background-color: #E9DDD4;
+    font-family: Karla, sans-serif;
+    font-weight: bold;
+    color: #333;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-bottom: none;
+}
+
+.favourites > input[type="radio"]:checked + label {
+    background-color: #900020;
+    color: white;
+    border-color: #500010;
+    position: relative;
+}
+
+.favourites > input[type="radio"] + label + div {
+    display: none;
+    width: 100%;
+    order: 1;
+    background-color: #E9DDD4;
+    padding: 1em;
+    border-radius: 0 0.5em 0.5em 0.5em;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.favourites > input[type="radio"]:checked + label + div {
+    display: block;
+}
+
+.favourites ol {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style-type: none;
+}
+
+.favourites figure {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.favourites figure:hover {
+    transform: scale(1.05);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 1em 0;
+}
+
+.gallery a {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery a:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.row-span-2 {
+    grid-row: span 2;
+}
+
+.col-span-2 {
+    grid-column: span 2;
+}
+
+.bio a {
+    display: block;
+    position: relative;
+}
+
+.paperclip {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20%;
+}
+
+.bio a[href*="Self-potrait.jpg"] .paperclip {
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+
 #backtotop {
+    position: sticky;
+    bottom: 10px;
+    left: 0;
+    margin-left: -25px;
+    display: inline-block;
+    transition: transform 0.3s ease;
     text-decoration: none;
 }
 
+#backtotop:hover {
+    transform:rotate(45deg)
+}
