@@ -6,13 +6,16 @@
     <meta name="author" content="Juan Roy">
     <title>CSD112</title>
     <link rel="icon" type="image/x-icon" href="assets/Lab-2/favicon.ico">
+    <link href="styles/normalize.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Karla:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div>
+    <div class="width-wrap">
         <header id="top">
             <nav>
                 <ul>
@@ -20,6 +23,7 @@
                     <li><a href="links.html">Links</a></li>
                     <li><a href="glossary.html">Glossary</a></li>
                     <li><a href="survey.html">Survey</a></li>
+                    <li><a href="lorem.html">Lorem</a></li>
                 </ul>
             </nav>
         </header>
@@ -47,7 +51,7 @@
                         <label for="best_bear">Which bear is best?
                             <abbr title="required">*</abbr></label>
                         <select name="best_bear" id="best_bear" required aria-required="true">
-                            <option value="">&nbsp;</option>
+                            <option value="" selected>&nbsp;</option>
                             <option value="Black">Black</option>
                             <option value="Brown">Brown</option>
                             <option value="Care">Care</option>
@@ -58,7 +62,7 @@
                     </p>
                     <fieldset>
                         <legend>Do you like radio buttons?</legend>
-                        <ul>
+                        <ul id="radio">
                             <li><input type="radio" id="enjoys_radio_yes" name="enjoys_radio_buttons" value="yes">
                                 <label for="enjoys_radio_yes">Yes</label>
                             </li>
