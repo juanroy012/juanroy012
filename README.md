@@ -14,4 +14,4 @@ Java, Spring Boot, React, PostgreSQL, and Docker. I enjoy building full-stack ap
 
 I'm currently learning more about backend development and looking for an entry-level software developer role. [Email me for my resume](mailto:24032090@saultcollege.ca).
 
-You can reach me at [24032090@saultcollege.ca](mailto:24032090@saultcollege.ca).
+You can reach me at [juanroy012@gmail.com](mailto:juanroy012@gmail.com).
